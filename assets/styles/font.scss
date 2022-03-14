@@ -1,0 +1,36 @@
+/** American Captain Font */ 
+@font-face {
+    font-family: 'American Captain';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/American Captain.woff') format('woff');
+}
+
+/** Proxima Font */
+@font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/proximanova-light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/proximanova-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/proximanova-semibold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/proximanova-bold.woff') format('woff');
+}

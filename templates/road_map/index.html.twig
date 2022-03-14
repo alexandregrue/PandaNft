@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RoadMap index{% endblock %}
+
+{% block body %}
+    <h1>RoadMap index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for road_map in road_maps %}
+            <tr>
+                <td>{{ road_map.id }}</td>
+                <td>{{ road_map.title }}</td>
+                <td>{{ road_map.date }}</td>
+                <td>{{ road_map.description }}</td>
+                <td>
+                    <a href="{{ path('app_road_map_show', {'id': road_map.id}) }}">show</a>
+                    <a href="{{ path('app_road_map_edit', {'id': road_map.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_road_map_new') }}">Create new</a>
+{% endblock %}

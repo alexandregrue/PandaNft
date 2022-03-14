@@ -1,0 +1,132 @@
+footer {
+    background: rgba(0,0,0,0);
+    background: linear-gradient(150deg, rgba(0,0,0,0) 23%, rgba(0,83,45,1) 100%);
+    border-top: 1px solid #fff;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px 0 50px;
+    max-width: 1200px;
+    margin: auto;
+
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @media screen and (max-width: 900px) {
+        .footer-container {
+            flex-direction: column;
+        }
+    }
+
+    #footer-menu {
+        padding: 0;
+        flex-direction: column;
+
+        li {
+            font-family: 'Proxima Nova';
+            font-size: 16px;
+            color: #fff;
+            list-style-type: none;
+            padding: 2px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    .socials {
+        flex-direction: row;
+        padding: 15px 0;
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    .footer-logo-container {
+        display: flex;
+        align-items: center;
+        .footer-elrond-logo {
+            width: 30px;
+            height: 30px;
+        }
+        .footer-elrond-logo-img {
+            width: 240px;
+            height: 60px;
+            padding: 0 30px;
+        }
+        .footer-elrond-text {
+            font-family: 'Proxima Nova';
+            font-size: 20px;
+            color: #fff;
+            padding: 0 30px;
+        }
+    }
+
+    .footer-vl {
+        border-left: 2px solid #fff;
+        height: 50px;
+    }
+
+    .footer-elrond-container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.copyright {
+    font-family: 'Proxima Nova';
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+@media screen and (max-width: 900px) {
+
+    #footer-menu {
+        li {
+            text-align: center;
+        }
+    }
+
+    .footer-menu-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-logo-container {
+        justify-content: center;
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer-vl {
+        display: none;
+    }
+
+    .footer-logo-container {
+        flex-direction: column;
+    }
+
+    .footer-elrond-container {
+        flex-direction: column;
+    }
+
+    .footer-elrond-text {
+        padding: 30px 0;
+        text-align: center;
+    }
+
+    .footer-elrond-logo {
+        padding-bottom: 20px;
+    }
+}

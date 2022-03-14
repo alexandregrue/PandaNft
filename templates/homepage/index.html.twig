@@ -1,7 +1,329 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomepageController!{% endblock %}
+{% block title %}GorillaCrew{% endblock %}
 
 {% block body %}
+<!-- Navbar -->
+<div class="navbar max-width-content">
+    <div id="logo-container">
+        <a href="index.html">
+            <img src="./assets/logo.gif" alt="Elrond Apes logo"/>
+        </a>
+    </div>
+    <div class="menu-container">
+        <ul id="menu">
+            {# 
+                Enter the text and link for the mint
+            #}
+            {# <li>
+                <a id="menu-btn" href="#">
+                    Launch App
+                </a>
+            </li> #}
+            <li>
+                <a href="https://discord.gg/rKnGgUDgYD">
+                    <img src = "{{ asset('build/images/socials/discord.svg') }}" alt="Discord" width="50" height="50" />
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/gorillacrewnft">
+                    <img src = "{{ asset('build/images/socials/twitter.svg') }}" alt="Twitter" width="50" height="50" />
+                </a>
+            </li>
+            {# 
+            Enter the image and link for Medium    
+            #}
+            {# <li>
+                <a href="https://t.me/ElrondAPEs">
+                    <img src = "{{ asset('build/images/socials/telegram.svg') }}" alt="Discord" width="50" height="50" />
+                </a>
+            </li> #}
+        </ul>
+    </div>
+</div>
 
+<!-- Main Section -->
+<div id="banner">
+    <div class="banner-section max-width-content">
+        <div class="banner-container">
+            <video width="500" muted autoplay playsinline class="img-banner" src="./assets/video/ape-presentation.mp4"></video>
+        </div>
+        <div class="banner-container">
+            <div class="text-animation">
+                {{ descriptions[0].description }}⚡
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About the club Section -->
+<section id="about">
+    <div class="about-section max-width-content">
+        <h1 class="section-title" data-aos="fade-up" data-aos-duration="1500">About The Crew</h1>
+        <p data-aos="fade-up" data-aos-duration="1500">
+            {{ abouts[0].description }}
+        </p>
+    </div>
+</section>
+
+<!-- About the club Section -->
+<section id="faq">
+    <div class="faq-section max-width-content">
+        <h1 class="section-title" data-aos="fade-up" data-aos-duration="1500">FAQ</h1>
+
+        {% for faq in faqs %}
+        <div class="topics">
+            <div class="topic" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+                <details>
+                    <summary class="question">{{ faq.question }}</summary>
+                    <div class="answer">
+                        {{ faq.response }}
+                    </div>
+                </details>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Roadmap Section -->
+<section id="roadmap">
+    <div class="roadmap-section max-width-content">
+        <h1 class="section-title" data-aos="fade-up" data-aos-duration="1500">Roadmap</h1>
+    
+        <div class="section-container">
+            <div class="roadmap-container">
+                <div class="timeline" data-aos-anchor-placement="bottom-bottom">
+                    {# here #}
+                    {% for roadmap in road_maps %}
+                        <div class="container left">
+                            <div class="content" data-aos="fade-up-right" data-aos-duration="1500">
+                                <div class="content-header">
+                                    <span class="content-header-title">{{ roadmap.title }}</span>
+                                    <span class="content-header-time">{{ roadmap.date }}</span>
+                                </div>
+                                <p>
+                                    {{ roadmap.description | nl2br}}
+                                </p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    {# <div class="container left">
+                        <div class="content" data-aos="fade-up-right" data-aos-duration="1500">
+                            <div class="content-header">
+                                <span class="content-header-title">DAO & Reward System</span>
+                                <span class="content-header-time">Q1 2022</span>
+                            </div>
+                            <p>
+                                We aim to create our DAO where holders will be able to lock their apes
+                                for voting and making proposals. Through this voting system, each holder has a 
+                                decisive role in the future decisions of the project (investment, staking...). 
+                                We'll use the DAO for rewarding our holders.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="container left">
+                    <div class="content" data-aos="fade-up-right" data-aos-duration="1500">
+                        <div class="content-header">
+                            <span class="content-header-title">NFT Launchpad</span>
+                            <span class="content-header-time">Q1 2022</span>
+                        </div>
+                        <p>
+                            We will release the first NFT Launchpad on the Elrond Blockchain. We will be featuring
+                            projects that we know are serious and who want to truly give something to their holders. 
+                            We will also make sure that apes holders are rewarded accordingly for their support!
+                        </p>
+                    </div>
+                    </div>
+                    <div class="container left">
+                    <div class="content" data-aos="fade-up-right" data-aos-duration="1500">
+                        <div class="content-header">
+                            <span class="content-header-title">Elrond Apes Club Shop</span>
+                            <span class="content-header-time">Q2 2022</span>
+                        </div>
+                        <p>
+                            Our shop will go live during the second quarter of 2022. Featuring clothes and 
+                            some interesting items we can't reveal yet. Sneak peeks will be posted during the 
+                            first quarter.
+                        </p>    
+                    </div>
+                    </div>
+
+                    <div class="container left">
+                        <div class="content" data-aos="fade-up-right" data-aos-duration="1500">
+                            <div class="content-header">
+                                <span class="content-header-title">3D & Augmented Reality NFT Artwork</span>
+                                <span class="content-header-time">Q3-Q4 2022</span>
+                            </div>
+                            <p>
+                                Imagine if you could see what your new Elrond APEs looks like in the real world.
+                            </p>   
+                        </div>
+                    </div>
+
+                    <div class="container left">
+                        <div class="content" data-aos="fade-up-right" data-aos-duration="1500">
+                            <div class="content-header">
+                                <span class="content-header-title">What's next?</span>
+                                <span class="content-header-time">After</span>
+                            </div>
+                            <p>
+                                A new roadmap will be released, letting everyone know what we planned for the 
+                                future of the project and how we are planning to reward our holders and keep 
+                                them entertained.
+                            </p>   
+                        </div>
+                    </div> #}
+                </div>
+            </div>
+
+            <div id="ape-scroll-container" class="ape-scroll-bound" data-aos="fade-up-left" data-aos-duration="1500">
+                <div class="bound-content">
+                     <video width="600" muted preload playsinline>
+                        <source src="assets/video/3d-ape.mp4">
+                        <p>Your user agent does not support the HTML5 Video element.</p>
+              </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team">
+    <div class="team-section max-width-content">
+        <h1 class="section-title" data-aos="fade-down"  data-aos-duration="1500">Team</h1>
+
+        <div class="section-container team-section-container">
+
+            {% for team in teams %}
+                <div class="team-card" data-aos="flip-left" data-aos-duration="1500">
+                    <div class="team-card-img">
+                        <img src="{{ asset('/images/teams/' ~ team.picture) }}" alt="Team member {{ team.name }}"/>
+                    </div>
+                    <div class="team-card-name">{{ team.name }}</div>
+                    <div class="team-card-role">{{ team.job }}</div>
+                </div>
+            {% endfor %}
+
+            {# <div class="team-card" data-aos="flip-left" data-aos-duration="1500">
+                <div class="team-card-img">
+                    <img src="./assets/team/team-member-koba.png" alt="Team member Koba"/>
+                </div>
+                <div class="team-card-name">Koba</div>
+                <div class="team-card-role">Marketing Director</div>
+            </div>
+
+            <div class="team-card" data-aos="flip-left" data-aos-duration="1500">
+                <div class="team-card-img">
+                    <img src="./assets/team/team-member-julian.png" alt="Team member Julien"/>
+                </div>
+                <div class="team-card-name">Julian</div>
+                <div class="team-card-role">Smart Contract Developer</div>
+            </div>
+
+            <div class="team-card" data-aos="flip-right" data-aos-duration="1500">
+                <div class="team-card-img">
+                    <img src="./assets/team/team-member-karl.png" alt="Team member ReFrame"/>
+                </div>
+                <div class="team-card-name">Karl</div>
+                <div class="team-card-role">Business Developer</div>
+            </div>
+
+            <div class="team-card" data-aos="flip-right" data-aos-duration="1500">
+                <div class="team-card-img">
+                    <img src="./assets/team/team-member-ginsburg.png" alt="Team member Ginsburg"/>
+                </div>
+                <div class="team-card-name">Ginsburg</div>
+                <div class="team-card-role">2D & 3D Designer</div>
+            </div>
+
+            <div class="team-card" data-aos="flip-right" data-aos-duration="1500">
+                <div class="team-card-img">
+                    <img src="./assets/team/team-member-sicko.png" alt="Team member Ginsburg"/>
+                </div>
+                <div class="team-card-name">Sicko</div>
+                <div class="team-card-role">web3 Developer</div>
+            </div> #}
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-logo-container">
+                <div class="footer-elrond-container">
+                    <img class="footer-elrond-logo" src="./assets/elrond/elrond-logo-white.png" alt="Elrond White Logo" />
+                    <div class="footer-elrond-text">
+                        Made for 
+                        <br>
+                        Elrond with &#x1F499;
+                    </div>
+                    <div class="footer-vl"></div>
+                </div>
+                <img class="footer-elrond-logo-img" src="./assets/footer-logo.png" alt="Footer logo" />
+            </div>
+            <div class="footer-menu-container">
+                <ul id="footer-menu">
+                    <li>
+                        <a href="#banner">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            About The Club
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#roadmap">
+                            Roadmap
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#team">
+                            Team
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="terms.html">
+                            Terms & Conditions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://app.elrondapes.com">
+                            Dapp
+                        </a>
+                    </li>
+
+                    <li>
+                        <div class="socials">
+                            <a href="https://discord.com/invite/elrondapes">
+                                <img src = "./assets/socials/discord.svg" alt="Discord" width="22" height="22" />
+                            </a>
+
+                            <a href="https://twitter.com/ElrondApes">
+                                <img src = "./assets/socials/twitter.svg" alt="Discord" width="22" height="22" />
+                            </a>
+                        
+                            <a href="https://t.me/ElrondAPEs">
+                                <img src = "./assets/socials/telegram.svg" alt="Discord" width="22" height="22" />
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            ©2021 Elrond Apes. All rights reserved.
+        </div>
+    </div>
+</footer>
 {% endblock %}
