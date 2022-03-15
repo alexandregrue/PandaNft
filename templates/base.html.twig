@@ -14,6 +14,12 @@
         {% endblock %}
     </head>
     <body>
+        {% if is_granted('ROLE_ADMIN') %}
+        <header class="logout">
+            <a href="{{ path('logout') }}">Logout</a>
+        </header>
+            
+        {% endif %}
         {% block body %}{% endblock %}
     </body>
 </html>
