@@ -6,8 +6,8 @@
 <!-- Navbar -->
 <div class="navbar max-width-content">
     <div id="logo-container">
-        <a href="index.html">
-            <img src="./assets/logo.gif" alt="Elrond Apes logo"/>
+        <a href="{{ path('homepage') }}">
+            <img src="{{ asset('build/images/items/GorillaBanniereBlue.png') }}" alt="GorillaCrew Logo"/>
         </a>
     </div>
     <div class="menu-container">
@@ -34,8 +34,8 @@
             Enter the image and link for Medium    
             #}
             {# <li>
-                <a href="https://t.me/ElrondAPEs">
-                    <img src = "{{ asset('build/images/socials/telegram.svg') }}" alt="Discord" width="50" height="50" />
+                <a href="#Medium">
+                    <img src = "Medium logo" alt="Medium" width="50" height="50" />
                 </a>
             </li> #}
         </ul>
@@ -108,72 +108,6 @@
                             </div>
                         </div>
                     {% endfor %}
-                    {# <div class="container left">
-                        <div class="content" data-aos="fade-up-right" data-aos-duration="1500">
-                            <div class="content-header">
-                                <span class="content-header-title">DAO & Reward System</span>
-                                <span class="content-header-time">Q1 2022</span>
-                            </div>
-                            <p>
-                                We aim to create our DAO where holders will be able to lock their apes
-                                for voting and making proposals. Through this voting system, each holder has a 
-                                decisive role in the future decisions of the project (investment, staking...). 
-                                We'll use the DAO for rewarding our holders.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="container left">
-                    <div class="content" data-aos="fade-up-right" data-aos-duration="1500">
-                        <div class="content-header">
-                            <span class="content-header-title">NFT Launchpad</span>
-                            <span class="content-header-time">Q1 2022</span>
-                        </div>
-                        <p>
-                            We will release the first NFT Launchpad on the Elrond Blockchain. We will be featuring
-                            projects that we know are serious and who want to truly give something to their holders. 
-                            We will also make sure that apes holders are rewarded accordingly for their support!
-                        </p>
-                    </div>
-                    </div>
-                    <div class="container left">
-                    <div class="content" data-aos="fade-up-right" data-aos-duration="1500">
-                        <div class="content-header">
-                            <span class="content-header-title">Elrond Apes Club Shop</span>
-                            <span class="content-header-time">Q2 2022</span>
-                        </div>
-                        <p>
-                            Our shop will go live during the second quarter of 2022. Featuring clothes and 
-                            some interesting items we can't reveal yet. Sneak peeks will be posted during the 
-                            first quarter.
-                        </p>    
-                    </div>
-                    </div>
-
-                    <div class="container left">
-                        <div class="content" data-aos="fade-up-right" data-aos-duration="1500">
-                            <div class="content-header">
-                                <span class="content-header-title">3D & Augmented Reality NFT Artwork</span>
-                                <span class="content-header-time">Q3-Q4 2022</span>
-                            </div>
-                            <p>
-                                Imagine if you could see what your new Elrond APEs looks like in the real world.
-                            </p>   
-                        </div>
-                    </div>
-
-                    <div class="container left">
-                        <div class="content" data-aos="fade-up-right" data-aos-duration="1500">
-                            <div class="content-header">
-                                <span class="content-header-title">What's next?</span>
-                                <span class="content-header-time">After</span>
-                            </div>
-                            <p>
-                                A new roadmap will be released, letting everyone know what we planned for the 
-                                future of the project and how we are planning to reward our holders and keep 
-                                them entertained.
-                            </p>   
-                        </div>
-                    </div> #}
                 </div>
             </div>
 
@@ -254,16 +188,16 @@
     <div class="footer">
         <div class="footer-container">
             <div class="footer-logo-container">
-                <div class="footer-elrond-container">
-                    <img class="footer-elrond-logo" src="./assets/elrond/elrond-logo-white.png" alt="Elrond White Logo" />
-                    <div class="footer-elrond-text">
-                        Made for 
+                <div class="footer-gorilla-container">
+                    <img class="footer-gorilla-logo" src="{{ asset('build/images/items/gorillaWhite.png') }}" alt="gorilla White Logo" />
+                    <div class="footer-gorilla-text">
+                        Made by 
                         <br>
-                        Elrond with &#x1F499;
+                        Gorilla Crew with 💙
                     </div>
                     <div class="footer-vl"></div>
                 </div>
-                <img class="footer-elrond-logo-img" src="./assets/footer-logo.png" alt="Footer logo" />
+                <img class="footer-gorilla-logo-img" src="{{ asset('build/images/items/GorillaBanniereWhite.png') }}" alt="Footer logo" />
             </div>
             <div class="footer-menu-container">
                 <ul id="footer-menu">
@@ -296,33 +230,26 @@
                             Terms & Conditions
                         </a>
                     </li>
-
-                    <li>
-                        <a href="https://app.elrondapes.com">
-                            Dapp
-                        </a>
-                    </li>
-
                     <li>
                         <div class="socials">
-                            <a href="https://discord.com/invite/elrondapes">
-                                <img src = "./assets/socials/discord.svg" alt="Discord" width="22" height="22" />
+                            <a href="https://discord.gg/rKnGgUDgYD">
+                                <img src = "{{ asset('build/images/socials/discord.svg') }}" alt="Discord" width="22" height="22" />
                             </a>
 
-                            <a href="https://twitter.com/ElrondApes">
-                                <img src = "./assets/socials/twitter.svg" alt="Discord" width="22" height="22" />
+                            <a href="https://twitter.com/gorillacrewnft">
+                                <img src = "{{ asset('build/images/socials/twitter.svg') }}" alt="Twitter" width="22" height="22" />
                             </a>
                         
-                            <a href="https://t.me/ElrondAPEs">
-                                <img src = "./assets/socials/telegram.svg" alt="Discord" width="22" height="22" />
-                            </a>
+                            {# <a href="#medium">
+                                <img src = "logo for medium" alt="Medium" width="22" height="22" />
+                            </a> #}
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="copyright">
-            ©2021 Elrond Apes. All rights reserved.
+            ©2021 Gorilla Crew. All rights reserved.
         </div>
     </div>
 </footer>

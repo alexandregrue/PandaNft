@@ -1,6 +1,6 @@
 footer {
     background: rgba(0,0,0,0);
-    background: linear-gradient(150deg, rgba(0,0,0,0) 23%, rgba(0,83,45,1) 100%);
+    background: linear-gradient(150deg, rgba(49, 4, 153, 0) 23%, rgb(90, 118, 180) 100%);
     border-top: 1px solid #fff;
 }
 
@@ -53,16 +53,16 @@ footer {
     .footer-logo-container {
         display: flex;
         align-items: center;
-        .footer-elrond-logo {
-            width: 30px;
-            height: 30px;
+        .footer-gorilla-logo {
+            width: 50px;
+            height: 50px;
         }
-        .footer-elrond-logo-img {
-            width: 240px;
-            height: 60px;
-            padding: 0 30px;
+        .footer-gorilla-logo-img {
+            width: 350px;
+            height: 150px;
+            padding: 15px 30px 0 30px;
         }
-        .footer-elrond-text {
+        .footer-gorilla-text {
             font-family: 'Proxima Nova';
             font-size: 20px;
             color: #fff;
@@ -75,7 +75,7 @@ footer {
         height: 50px;
     }
 
-    .footer-elrond-container {
+    .footer-gorilla-container {
         display: flex;
         align-items: center;
     }
@@ -117,16 +117,16 @@ footer {
         flex-direction: column;
     }
 
-    .footer-elrond-container {
+    .footer-gorilla-container {
         flex-direction: column;
     }
 
-    .footer-elrond-text {
+    .footer-gorilla-text {
         padding: 30px 0;
         text-align: center;
     }
 
-    .footer-elrond-logo {
+    .footer-gorilla-logo {
         padding-bottom: 20px;
     }
 }

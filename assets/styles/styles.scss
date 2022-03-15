@@ -134,7 +134,7 @@ section {
         content: '';
         position: absolute;
         width: 6px;
-        background: linear-gradient(180deg, rgba(22,1,5,1) 0%, rgba(148,38,39,1) 31%, rgba(152,53,53,1) 40%, rgba(186,117,8,1) 96%);
+        background: linear-gradient(180deg, rgba(22,1,5,1) 0%, rgb(46, 22, 78) 31%, rgb(26, 44, 143) 40%, rgb(130, 195, 248) 96%);
         top: 0;
         bottom: 0;
         right: 0;
@@ -223,6 +223,7 @@ section {
 
             .content-header-title {
                 font-family: 'Proxima Nova';
+                width: 85%;
                 color: #fff;
                 font-weight: bold;
                 padding: 3px 0;
@@ -533,6 +534,7 @@ section {
         text-align: center;
         font-size: 20px;
         line-height: 26px;
+        margin-top: 0;
         padding: 20px 50px;
      }
  }
