@@ -19,7 +19,7 @@ class RoadMap
     #[ORM\Column(type: 'string', length: 255)]
     private ?string $date;
 
-    #[ORM\Column(type: 'text')]
+    #[ORM\Column(type: 'text', nullable: true)]
     private ?string $description;
 
     public function getId(): ?int

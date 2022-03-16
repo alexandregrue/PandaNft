@@ -28,9 +28,12 @@ class RoadMapType extends AbstractType
             ])
             ->add('description', TextareaType::class, [
                 'label' => 'Description',
+                'required' => false,
                 'attr' => [
                     'placeholder' => 'Description',
+                    
                 ],
+
             ])
         ;
     }

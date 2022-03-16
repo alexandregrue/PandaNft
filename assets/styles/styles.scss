@@ -143,7 +143,7 @@ section {
       
       /* Container around content */
       .container {
-        padding: 10px 40px;
+        padding: 10px 35px;
         position: relative;
         background-color: inherit;
         width: 100%;
@@ -171,7 +171,7 @@ section {
       
       /* Place the container to the right */
       .right {
-        left: 50%;
+        left: 598px;
       }
       
       /* Add arrows to the left container (pointing right) */
@@ -189,7 +189,7 @@ section {
       }*/
       
       /* Add arrows to the right container (pointing left) */
-      .right::before {
+      /* .right::before {
         content: " ";
         height: 0;
         position: absolute;
@@ -200,7 +200,7 @@ section {
         border: medium solid white;
         border-width: 10px 10px 10px 0;
         border-color: transparent white transparent transparent;
-      }
+      } */
       
       /* Fix the circle for containers on the right side */
       .right::after {

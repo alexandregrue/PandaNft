@@ -3,11 +3,14 @@
 {% block title %}Edit Team{% endblock %}
 
 {% block body %}
-    <h1>Edit Team</h1>
+<div class="editForm">
+    <img src="{{ asset('build/images/items/GorillaBanniereBlue.png') }}" alt="GorillaCrew Logo"/>
+
+    <h1 class="section-title">Edit Team</h1>
 
     {{ include('team/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('app_team_index') }}">back to list</a>
+    <a href="{{ path('app_admin_dashboard') }}">Back</a>
 
-    {{ include('team/_delete_form.html.twig') }}
+</div>
 {% endblock %}

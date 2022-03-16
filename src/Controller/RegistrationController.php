@@ -25,7 +25,7 @@ class RegistrationController extends AbstractController
     {
         $userExist = $userRepository->findAll();
         if($userExist) {
-            return $this->redirectToRoute('app_login');
+            return $this->redirectToRoute('login');
         } else {
             $user = new User();
             $form = $this->createForm(RegistrationFormType::class, $user);

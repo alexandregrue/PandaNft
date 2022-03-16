@@ -47,7 +47,7 @@ class DescriptionController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'app_description_edit', methods: ['GET', 'POST'])]
+    /* #[Route('/{id}/edit', name: 'app_description_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Description $description, DescriptionRepository $descriptionRepository): Response
     {
         $form = $this->createForm(DescriptionType::class, $description);
@@ -62,7 +62,7 @@ class DescriptionController extends AbstractController
             'description' => $description,
             'form' => $form,
         ]);
-    }
+    } */
 
     #[Route('/{id}', name: 'app_description_delete', methods: ['POST'])]
     public function delete(Request $request, Description $description, DescriptionRepository $descriptionRepository): Response

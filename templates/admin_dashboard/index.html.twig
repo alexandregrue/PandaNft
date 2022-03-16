@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}GorillaCrew{% endblock %}
+
+{% block title %}GorillaCrewAdmin{% endblock %}
 
 {% block body %}
 <!-- Navbar -->
@@ -52,6 +53,11 @@
             <div class="text-animation">
                 {{ descriptions[0].description }}⚡
             </div>
+            <div class="edit">
+                <a href="{{ path('description_edit', {'id': descriptions[0].id}) }}">
+                    <img src="{{ asset('build/images/icons/edit.ico') }}" alt="Edit" width="25" height="25" />
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -63,6 +69,11 @@
         <p data-aos="fade-up" data-aos-duration="1500">
             {{ abouts[0].description }}
         </p>
+        <div class="edit">
+            <a href="{{ path('about_edit', {'id': abouts[0].id}) }}">
+                <img src="{{ asset('build/images/icons/edit.ico') }}" alt="Edit" width="25" height="25" />
+            </a>
+        </div>
     </div>
 </section>
 
@@ -80,6 +91,11 @@
                         {{ faq.response }}
                     </div>
                 </details>
+            </div>
+            <div class="edit">
+                <a href="{{ path('faq_edit', {'id': faq.id}) }}">
+                    <img src="{{ asset('build/images/icons/edit.ico') }}" alt="Edit" width="25" height="25" />
+                </a>
             </div>
         </div>
         {% endfor %}
@@ -107,6 +123,11 @@
                                         {{ roadmap.description | nl2br}}
                                     </p>
                                 </div>
+                                <div class="editright">
+                                    <a href="{{ path('road_map_edit', {'id': roadmap.id}) }}">
+                                        <img src="{{ asset('build/images/icons/edit.ico') }}" alt="Edit" width="25" height="25" />
+                                    </a>
+                                </div>
                             </div>
                         {% else %}
                             <div class="container right">
@@ -119,11 +140,22 @@
                                         {{ roadmap.description | nl2br}}
                                     </p>
                                 </div>
+                                <div class="editright">
+                                    <a href="{{ path('road_map_edit', {'id': roadmap.id}) }}">
+                                        <img src="{{ asset('build/images/icons/edit.ico') }}" alt="Edit" width="25" height="25" />
+                                    </a>
+                                </div>
                             </div>
                         {% endif %}
-
-                        
                     {% endfor %}
+                </div>
+            </div>
+            <div id="ape-scroll-container" class="ape-scroll-bound" data-aos="fade-up-left" data-aos-duration="1500">
+                <div class="bound-content">
+                     <video width="600" muted preload playsinline>
+                        <source src="assets/video/3d-ape.mp4">
+                        <p>Your user agent does not support the HTML5 Video element.</p>
+              </video>
                 </div>
             </div>
         </div>
@@ -144,7 +176,14 @@
                     </div>
                     <div class="team-card-name">{{ team.name }}</div>
                     <div class="team-card-role">{{ team.job }}</div>
+                    
                 </div>
+                <div class="edit">
+                    <a href="{{ path('team_edit', {'id': team.id}) }}">
+                        <img src="{{ asset('build/images/icons/edit.ico') }}" alt="Edit" width="25" height="25" />
+                    </a>
+                </div>
+                
             {% endfor %}
         </div>
     </div>
