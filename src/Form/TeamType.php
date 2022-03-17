@@ -15,7 +15,7 @@ class TeamType extends AbstractType
     {
         $builder
             ->add('picture', FileType::class, [
-                'label' => false,
+                'label' => 'Picture',
                 'multiple' => false,
                 'required' => false,
                 'mapped' => false,
