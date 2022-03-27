@@ -13,11 +13,12 @@
 }
 
 #logo-container {
-    margin: 0 10px;
+    margin: 20px 0;
 
     img {
-        width: 500px;
-        height: 200px;
+        width: 570px;
+        height: 175px;
+        border-radius: 10px;
     }
 }
 
@@ -71,8 +72,8 @@ ul {
 
     #logo-container {
         img {
-            max-width: 352px;
-            max-height: 67px;
+            max-width: 460px;
+            max-height: 155px;
             width: 100%;
         }
     }

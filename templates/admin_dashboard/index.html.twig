@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 
 
-{% block title %}GorillaCrewAdmin{% endblock %}
+{% block title %}CyberCloneAdmin{% endblock %}
 
 {% block body %}
 <!-- Navbar -->
 <div class="navbar max-width-content">
     <div id="logo-container">
         <a href="{{ path('homepage') }}">
-            <img src="{{ asset('build/images/items/GorillaBanniereBlue.png') }}" alt="GorillaCrew Logo"/>
+            <img src="{{ asset('build/images/items/CyberCloneBanniere.jpeg') }}" alt="CyberClone banniere"/>
         </a>
     </div>
     <div class="menu-container">
@@ -27,7 +27,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://twitter.com/gorillacrewnft">
+                <a href="https://twitter.com/cyberclonenft">
                     <img src = "{{ asset('build/images/socials/twitter.svg') }}" alt="Twitter" width="50" height="50" />
                 </a>
             </li>
@@ -35,7 +35,7 @@
             Enter the image and link for Medium    
             #}
             <li>
-                <a href="#">
+                <a href="https://medium.com/cyber-clone/roadmap-103083df5ab7">
                     <img src = "{{ asset('build/images/socials/medium.svg') }}" alt="Medium" width="50" height="50" />
                 </a>
             </li>
@@ -47,6 +47,7 @@
 <div id="banner">
     <div class="banner-section max-width-content">
         <div class="banner-container">
+            <img class="banner-image" src="{{ asset('build/images/items/CyberCloneImage.jpeg') }}" alt="CyberClone banniere"/>
         {# Image to insert #}
         </div>
         <div class="banner-container">
@@ -186,16 +187,16 @@
     <div class="footer">
         <div class="footer-container">
             <div class="footer-logo-container">
-                <div class="footer-gorilla-container">
-                    <img class="footer-gorilla-logo" src="{{ asset('build/images/items/gorillaWhite.png') }}" alt="gorilla White Logo" />
-                    <div class="footer-gorilla-text">
+                <div class="footer-cyber-container">
+                    <img class="footer-cyber-logo" src="{{ asset('build/images/items/CyberCloneLogo.png') }}" alt="cyber White Logo" />
+                    <div class="footer-cyber-text">
                         Made by 
                         <br>
-                        Gorilla Crew with 💙
+                        CyberClone with 💙
                     </div>
                     <div class="footer-vl"></div>
                 </div>
-                <img class="footer-gorilla-logo-img" src="{{ asset('build/images/items/GorillaBanniereWhite.png') }}" alt="Footer logo" />
+                <img class="footer-cyber-logo-img" src="{{ asset('build/images/items/CyberCloneBanniere.jpeg') }}" alt="Footer banniere" />
             </div>
             <div class="footer-menu-container">
                 <ul id="footer-menu">
@@ -223,22 +224,22 @@
                         </a>
                     </li>
 
-                    <li>
+                    {# <li>
                         <a href="terms.html">
                             Terms & Conditions
                         </a>
-                    </li>
+                    </li> #}
                     <li>
                         <div class="socials">
                             <a href="https://discord.gg/rKnGgUDgYD">
                                 <img src = "{{ asset('build/images/socials/discord.svg') }}" alt="Discord" width="22" height="22" />
                             </a>
 
-                            <a href="https://twitter.com/gorillacrewnft">
+                            <a href="https://twitter.com/cyberclonenft">
                                 <img src = "{{ asset('build/images/socials/twitter.svg') }}" alt="Twitter" width="22" height="22" />
                             </a>
                         
-                            <a href="#">
+                            <a href="https://medium.com/cyber-clone/roadmap-103083df5ab7">
                                 <img src = "{{ asset('build/images/socials/medium.svg') }}" alt="Medium" width="22" height="22" />
                             </a>
                         </div>
@@ -247,7 +248,7 @@
             </div>
         </div>
         <div class="copyright">
-            ©2022 Gorilla Crew. All rights reserved.
+            ©2022 CyberClone. All rights reserved.
         </div>
     </div>
 </footer>
