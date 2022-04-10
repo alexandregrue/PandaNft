@@ -7,7 +7,7 @@ html, body {
     scroll-behavior: smooth;
 }
 html {
-    background: linear-gradient(160deg, rgb(0, 0, 0) 20%, rgb(4, 43, 9) 45%, rgb(0, 0, 0) 90%);
+    background: linear-gradient(160deg, rgb(0, 0, 0) 20%, rgb(55, 124, 166) 45%, rgb(0, 0, 0) 90%);
     background-size: cover;
     min-height: 100%;
 
@@ -38,8 +38,8 @@ body, section {
     align-items: center;
 
     .banner-image {
-        height: 275px;
-        width: 90%;
+        height: 300px;
+        width: 100%;
         max-width: 525px;
         border-radius: 10px;
 
@@ -108,9 +108,7 @@ section {
     padding: 30px 0;
 }
 
-.banner-container {
-    width: 50%;
-}
+
 
 /** Section Roadmap */
 .roadmap-section {
@@ -141,7 +139,7 @@ section {
         content: '';
         position: absolute;
         width: 6px;
-        background: linear-gradient(180deg, rgb(29, 8, 48) 0%, rgb(22, 66, 28) 31%, rgb(30, 58, 34) 40%, rgb(100, 84, 55) 96%);
+        background: linear-gradient(180deg, rgb(29, 8, 48) 0%, rgb(25, 63, 87) 31%, rgb(48, 104, 168) 40%, rgb(121, 171, 199) 96%);
         top: 0;
         bottom: 0;
         right: 0;
@@ -307,7 +305,7 @@ section {
     }
 
     .banner-container {
-        width: 100%;
+        /* width: 100%; */
         text-align: center;
         padding: 20px 10px;
     }
