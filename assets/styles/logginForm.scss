@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 85%;
     max-width: 37.5rem;
-    margin: 0 auto;
+    margin: 10rem auto 0 auto;
     box-sizing: border-box;
 
     img {
@@ -67,8 +67,9 @@
 
 .logout {
     position: absolute;
-    right: 0px;
-    margin-right: 2rem;
+    left: 0px;
+    top: 0px;
+    margin-left: 2rem;
     margin-top: 2rem;
     a {
         font-family: 'American Captain';
@@ -84,7 +85,7 @@
     flex-direction: column;
     width: 85%;
     max-width: 37.5rem;
-    margin: 0 auto;
+    margin: 10rem auto 0 auto;
     box-sizing: border-box;
 
     img {
