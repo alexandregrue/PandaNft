@@ -3,13 +3,14 @@
     flex-direction: column;
     width: 85%;
     max-width: 37.5rem;
-    margin: 10rem auto 0 auto;
+    margin: 2rem auto 0 auto;
     box-sizing: border-box;
 
     img {
         margin-top: 5rem;
         width: 100%;
         margin-bottom: 2rem;
+        border-radius: 5px;
     }
 
     form {
@@ -67,9 +68,9 @@
 
 .logout {
     position: absolute;
-    left: 0px;
+    right: 0px;
     top: 0px;
-    margin-left: 2rem;
+    margin-right: 2rem;
     margin-top: 2rem;
     a {
         font-family: 'American Captain';
@@ -85,7 +86,7 @@
     flex-direction: column;
     width: 85%;
     max-width: 37.5rem;
-    margin: 10rem auto 0 auto;
+    margin: 2rem auto 0 auto;
     box-sizing: border-box;
 
     img {

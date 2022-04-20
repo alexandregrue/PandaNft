@@ -5,8 +5,8 @@
 {% block body %}
 
 <div class="logginForm">
-{#     <img src="{{ asset('build/images/items/CyberCloneBanniere.jpeg') }}" alt="Cyberclone Logo"/>
- #}    {% if error %}
+    <img src="{{ asset('build/images/items/banniereCyberClone.png') }}" alt="Cyberclone Logo"/>
+    {% if error %}
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
     <h1 class="section-title">Login</h1>
