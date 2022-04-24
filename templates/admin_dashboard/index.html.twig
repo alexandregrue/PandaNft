@@ -8,38 +8,56 @@
 <div class="navbar max-width-content">
     <div id="logo-container">
         <a href="{{ path('homepage') }}">
-            <img src="{{ asset('build/images/items/banniereCyberClone.png') }}" alt="Cyberclone Logo"/>
+            <img src="{{ asset('build/images/items/banniereCyberClone.png') }}" alt="CyberClone banniere"/>
         </a>
     </div>
+    </h1>
     <div class="menu-container">
-        <ul id="menu">
-            {# 
-                Enter the text and link for the mint
-            #}
-            {# <li>
-                <a id="menu-btn" href="#">
-                    Launch App
-                </a>
-            </li> #}
-            <li>
-                <a href="https://discord.gg/rKnGgUDgYD">
-                    <img src = "{{ asset('build/images/socials/discord.svg') }}" alt="Discord" width="50" height="50" />
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/cyberclonenft">
-                    <img src = "{{ asset('build/images/socials/twitter.svg') }}" alt="Twitter" width="50" height="50" />
-                </a>
-            </li>
-            {# 
-            Enter the image and link for Medium    
-            #}
-            <li>
-                <a href="https://medium.com/cyber-clone">
-                    <img src = "{{ asset('build/images/socials/medium.svg') }}" alt="Medium" width="50" height="50" />
-                </a>
-            </li>
-        </ul>
+        <div class="nav-menu">
+            <ul >
+                <i id="menu-button" class="menu-btn fa-solid fa-bars"></i>
+                <i id="button-close" class="btn-close fa-solid fa-xmark"></i>
+                <li class="list-menu">
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+                <li class="list-menu">
+                    <a href="#faq">
+                        Faq
+                    </a>
+                </li>
+                <li class="list-menu">
+                    <a href="#roadmap">
+                        RoadMap
+                    </a>
+                </li>
+                <li class="list-menu">
+                    <a href="#team">
+                        Team
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="menu-sociaux">
+            <ul id="menu">
+                <li>
+                    <a href="https://discord.gg/rKnGgUDgYD">
+                        <img src = "{{ asset('build/images/socials/discord.svg') }}" alt="Discord" width="50" height="50" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/cyberclonenft">
+                        <img src = "{{ asset('build/images/socials/twitter.svg') }}" alt="Twitter" width="50" height="50" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://medium.com/cyber-clone">
+                        <img src = "{{ asset('build/images/socials/medium.svg') }}" alt="Medium" width="50" height="50" />
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 
@@ -252,4 +270,41 @@
         </div>
     </div>
 </footer>
+<script>
+    let menu = document.getElementById('menu-button');
+    let menuclose = document.getElementById('button-close');
+    let lists = document.querySelectorAll('.list-menu');
+    
+    menu.addEventListener('click', () => {
+        lists.forEach(list => {
+            list.style.display = 'block';
+        });
+        menuclose.style.display = 'block';
+        menu.style.display = 'none';
+    });
+
+    menuclose.addEventListener('click', () => {
+        lists.forEach(list => {
+            list.style.display = 'none';
+        });
+        menuclose.style.display = 'none';
+        menu.style.display = 'block';
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 500) {
+            lists.forEach(list => {
+                list.style.display = 'block';
+            });
+            menuclose.style.display = 'none';
+            menu.style.display = 'none';
+        } else {
+            lists.forEach(list => {
+                list.style.display = 'none';
+            });
+            menuclose.style.display = 'none';
+            menu.style.display = 'block';
+        }
+    });
+</script>
 {% endblock %}

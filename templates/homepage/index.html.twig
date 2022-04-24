@@ -14,7 +14,6 @@
     </h1>
     <div class="menu-container">
         <div class="nav-menu">
-            
             <ul >
                 <i id="menu-button" class="menu-btn fa-solid fa-bars"></i>
                 <i id="button-close" class="btn-close fa-solid fa-xmark"></i>
@@ -38,11 +37,7 @@
                         Team
                     </a>
                 </li>
-                
-                
-                
             </ul>
-            
         </div>
         <div class="menu-sociaux">
             <ul id="menu">
@@ -56,9 +51,6 @@
                         <img src = "{{ asset('build/images/socials/twitter.svg') }}" alt="Twitter" width="50" height="50" />
                     </a>
                 </li>
-                {# 
-                Enter the image and link for Medium    
-                #}
                 <li>
                     <a href="https://medium.com/cyber-clone">
                         <img src = "{{ asset('build/images/socials/medium.svg') }}" alt="Medium" width="50" height="50" />
@@ -259,7 +251,6 @@
         });
         menuclose.style.display = 'block';
         menu.style.display = 'none';
-
     });
 
     menuclose.addEventListener('click', () => {
