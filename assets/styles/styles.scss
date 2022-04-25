@@ -35,15 +35,18 @@ body, section {
  */
 .banner-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
+    .banner-container {
+        padding: 0;
+        text-align: center;
+    }
     .banner-image {
-        height: 300px;
-        width: 100%;
-        max-width: 300px;
+        height: 80%;
+        width: 80%;
         border-radius: 10px;
+        margin-bottom: 1rem;
 
     }
 }
