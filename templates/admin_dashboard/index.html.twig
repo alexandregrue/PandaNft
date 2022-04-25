@@ -6,11 +6,11 @@
 {% block body %}
 <!-- Navbar -->
 <div class="navbar max-width-content">
-    <div id="logo-container">
+    {# <div id="logo-container">
         <a href="{{ path('homepage') }}">
             <img src="{{ asset('build/images/items/banniereCyberClone.png') }}" alt="CyberClone banniere"/>
         </a>
-    </div>
+    </div> #}
     </h1>
     <div class="menu-container">
         <div class="nav-menu">
@@ -289,22 +289,6 @@
         });
         menuclose.style.display = 'none';
         menu.style.display = 'block';
-    });
-
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 500) {
-            lists.forEach(list => {
-                list.style.display = 'block';
-            });
-            menuclose.style.display = 'none';
-            menu.style.display = 'none';
-        } else {
-            lists.forEach(list => {
-                list.style.display = 'none';
-            });
-            menuclose.style.display = 'none';
-            menu.style.display = 'block';
-        }
     });
 </script>
 {% endblock %}
