@@ -96,31 +96,6 @@
     </div>
 </section>
 
-<!-- About the club Section -->
-<section id="faq">
-    <div class="faq-section max-width-content">
-        <h1 class="section-title" data-aos="fade-up" data-aos-duration="1500">FAQ</h1>
-
-        {% for faq in faqs %}
-        <div class="topics">
-            <div class="topic" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
-                <details>
-                    <summary class="question">{{ faq.question }}</summary>
-                    <div class="answer">
-                        {{ faq.response }}
-                    </div>
-                </details>
-            </div>
-            <div class="edit">
-                <a href="{{ path('faq_edit', {'id': faq.id}) }}">
-                    <img src="{{ asset('build/images/icons/edit.ico') }}" alt="Edit" width="25" height="25" />
-                </a>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</section>
-
 <!-- Roadmap Section -->
 <section id="roadmap">
     <div class="roadmap-section max-width-content">
@@ -170,6 +145,31 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- About the club Section -->
+<section id="faq">
+    <div class="faq-section max-width-content">
+        <h1 class="section-title" data-aos="fade-up" data-aos-duration="1500">FAQ</h1>
+
+        {% for faq in faqs %}
+        <div class="topics">
+            <div class="topic" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+                <details>
+                    <summary class="question">{{ faq.question }}</summary>
+                    <div class="answer">
+                        {{ faq.response }}
+                    </div>
+                </details>
+            </div>
+            <div class="edit">
+                <a href="{{ path('faq_edit', {'id': faq.id}) }}">
+                    <img src="{{ asset('build/images/icons/edit.ico') }}" alt="Edit" width="25" height="25" />
+                </a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </section>
 
