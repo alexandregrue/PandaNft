@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: cyberclone
--- Generation Time: 2022-04-22 20:49:57.5550
+-- Generation Time: 2022-05-05 19:06:14.7100
 -- -------------------------------------------------------------
 
 
@@ -107,8 +107,8 @@ INSERT INTO `road_map` (`id`, `title`, `date`, `description`) VALUES
 (9, 'Roadmap 2.0', 'Stage 9', 'More to come…');
 
 INSERT INTO `team` (`id`, `picture`, `name`, `job`) VALUES
-(1, 'b13b8dd7219be95082e8ca779b92cc8e.jpg', 'Mimran', 'Founder'),
-(2, 'ee823d9033e26b0da1aae361e2e935e0.jpg', 'GOAT', 'Assistant'),
+(1, '9e8b4657bea5e96d045e5a637b6d4282.jpg', 'Mimran', 'Founder'),
+(2, 'cf0e9fee0f3b861d89540961e66c6b83.jpg', 'GOAT', 'Assistant'),
 (3, '441e0783dc448529be4ae30bce8f9d20.jpg', 'Cesar', 'Marketing Manager'),
 (4, '8ec117060b6467e2606258b28cebb4f6.jpg', 'AlGrx', 'Web Developer'),
 (5, 'ed645d86364f6bf8e78954a62ba7e6b3.jpg', 'William', 'Designer'),
