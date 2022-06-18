@@ -105,7 +105,12 @@
                                         <span class="content-header-time">{{ roadmap.date }}</span>
                                     </div>
                                     <p>
-                                        {{ roadmap.description | nl2br}}
+                                        {% if roadmap.date == "Stage 1" %}
+                                        <a style="color: white; text-decoration: none;" href="https://twitter.com/CyberCloneNFT">https://twitter.com/CyberCloneNFT</a>
+                                        <a style="color: white; text-decoration: none;" href="https://discord.gg/ZGByP3TA">https://discord.gg/ZGByP3TA</a>
+                                        {% else %}
+                                            {{ roadmap.description | nl2br}}
+                                        {% endif %}
                                     </p>
                                 </div>
                             </div>
@@ -117,13 +122,16 @@
                                         <span class="content-header-time">{{ roadmap.date }}</span>
                                     </div>
                                     <p>
-                                        {{ roadmap.description | nl2br}}
+                                        {% if roadmap.date == "Stage 1" %}
+                                        <a style="color: white; text-decoration: none;" href="https://twitter.com/CyberCloneNFT">-  https://twitter.com/CyberCloneNFT</a><br>
+                                        <a style="color: white; text-decoration: none;" href="https://discord.gg/ZGByP3TA">-  https://discord.gg/ZGByP3TA</a>
+                                        {% else %}
+                                            {{ roadmap.description | nl2br}}
+                                        {% endif %}
                                     </p>
                                 </div>
                             </div>
                         {% endif %}
-
-                        
                     {% endfor %}
                 </div>
             </div>
