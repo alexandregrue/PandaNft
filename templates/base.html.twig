@@ -16,6 +16,7 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
+    
     <body>
         {% if is_granted('ROLE_ADMIN') %}
         <header class="logout">
