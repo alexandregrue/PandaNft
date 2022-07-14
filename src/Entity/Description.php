@@ -16,6 +16,9 @@ class Description
     #[ORM\Column(type: 'text')]
     private ?string $description;
 
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $title;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -29,6 +32,18 @@ class Description
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(?string $title): self
+    {
+        $this->title = $title;
 
         return $this;
     }

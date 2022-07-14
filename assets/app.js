@@ -10,7 +10,6 @@ import './styles/font.scss';
 import './styles/footer.scss';
 import './styles/header.scss';
 import './styles/styles.scss';
-import './styles/variables.scss';
 import './styles/logginForm.scss';
 
 
@@ -22,7 +21,7 @@ import './styles/logginForm.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
-AOS.init({
+/* AOS.init({
     // Global settings:
     disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
     startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
@@ -44,14 +43,14 @@ AOS.init({
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
   
   });
+} */
 
 /* window.addEventListener('load', AOS.refresh)
- */var wrapper = document.getElementsByClassName("text-animation")[0];
 wrapper.style.opacity="1";
 wrapper.innerHTML = wrapper.textContent.replace(/./g,"<span>$&</span>");
 
 var spans = wrapper.getElementsByTagName("span");
 
 for (var i = 0; i < spans.length;i ++) {
-    spans[i].style.animationDelay = i * 60 + "ms";
-}
+  spans[i].style.animationDelay = i * 60 + "ms";
+var wrapper = document.getElementsByClassName("text-animation")[0];   */

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}CyberClone{% endblock %}
+{% block title %}pandaClone{% endblock %}
 
 {% block body %}
 <!-- Navbar -->
@@ -8,23 +8,24 @@
 <div class="navbar max-width-content">
     {# <div id="logo-container">
         <a href="{{ path('homepage') }}">
-            <img src="{{ asset('build/images/items/banniereCyberClone.png') }}" alt="CyberClone banniere"/>
+            <img src="{{ asset('build/images/items/bannierepandaClone.png') }}" alt="pandaClone banniere"/>
         </a>
     </div> #}
-    </h1>
     <div class="menu-container">
         <div class="nav-menu">
             <ul >
-                <i id="menu-button" class="menu-btn fa-solid fa-bars"></i>
-                <i id="button-close" class="btn-close fa-solid fa-xmark"></i>
+                <li class="logo">
+                    <img src="{{ asset('build/images/items/panda-logo.png') }}" alt="pandalogo">
+                </li>
+                
                 <li class="list-menu">
                     <a href="#about">
                         About
                     </a>
                 </li>
                 <li class="list-menu">
-                    <a href="#faq">
-                        Faq
+                    <a href="#principles">
+                        Principles
                     </a>
                 </li>
                 <li class="list-menu">
@@ -37,6 +38,11 @@
                         Team
                     </a>
                 </li>
+                <li class="list-menu">
+                    <a href="#faq">
+                        Faq
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="menu-sociaux">
@@ -47,89 +53,124 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/cyberclonenft">
+                    <a href="https://twitter.com/pandaclonenft">
                         <img src = "{{ asset('build/images/socials/twitter.svg') }}" alt="Twitter" width="50" height="50" />
                     </a>
                 </li>
                 <li>
-                    <a href="https://medium.com/cyber-clone">
+                    <a href="https://medium.com/panda-clone">
                         <img src = "{{ asset('build/images/socials/medium.svg') }}" alt="Medium" width="50" height="50" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://medium.com/panda-clone">
+                        <img src = "{{ asset('build/images/socials/telegram.svg') }}" alt="Telegram" width="50" height="50" />
                     </a>
                 </li>
             </ul>
         </div>
     </div>
+    <ul class="mobile-nav">
+        <li class="list-menu">
+            <a href="#about">
+                About
+            </a>
+        </li>
+        <li class="list-menu">
+            <a href="#principles">
+                Principles
+            </a>
+        </li>
+        <li class="list-menu">
+            <a href="#roadmap">
+                RoadMap
+            </a>
+        </li>
+        <li class="list-menu">
+            <a href="#team">
+                Team
+            </a>
+        </li>
+        <li class="list-menu">
+            <a href="#faq">
+                Faq
+            </a>
+        </li>
+    </ul>
 </div>
 
 <!-- Main Section -->
 <div id="banner">
-    <a href="https://app.ebisusbay.com/drops/cyber-clone">MINT</a>
     <div class="banner-section max-width-content">
         <div class="banner-container">
-            <img class="banner-image" src="{{ asset('build/images/items/CyberNFT.jpg') }}" alt="CyberClone banniere"/>
+            <img class="banner-image" src="{{ asset('build/images/items/animation.gif') }}" alt="animation panda"/>
             {# Image to insert #}
         </div>
-        <div class="banner-container">
-            <div class="text-animation">
-                {{ descriptions[0].description }}⚡
-            </div>
-        </div>
     </div>
+</div>
+
+<div class="enter-trip">
+    <p class="enter">Enter the trip</p>
+    <img src="{{ asset('build/images/items/panda-logo.png') }}" alt="pandalogo">
+    <p class="trippin">Trippin Panda</p>
 </div>
 
 <!-- About the club Section -->
 <section id="about">
     <div class="about-section max-width-content">
-        <h1 class="section-title" data-aos="fade-up" data-aos-duration="1500">About The Clone</h1>
-        <p data-aos="fade-up" data-aos-duration="1500">
+        <h1 class="section-title">Who we are</h1>
+        <p>
             {{ abouts[0].description }}
         </p>
     </div>
 </section>
 
+<div class="panda-banner">
+    <img src="{{ asset('build/images/items/pandas-banner.png') }}" alt="panda banner">
+</div>
+
+<div class="principles" id="principles">
+    <h1 class="section-title">Principles</h1>
+    <div class="banner-container-description">
+        {% for description in descriptions %}
+            <div class="description-card">
+                <div class="content">
+                    <h2>{{ description.title }}</h2>
+                    <p>
+                        {{ description.description }}
+                    </p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
 <!-- Roadmap Section -->
 <section id="roadmap">
     <div class="roadmap-section max-width-content">
-        <h1 class="section-title" data-aos="fade-up" data-aos-duration="1500">Roadmap</h1>
-    
+        <h1 class="section-title">Pandamap</h1>
         <div class="section-container">
+            <p>
+                Our goal is simple: to offer the holder reasons to hold.
+                Despite liking the term “holder” very much, we see them more as investors who have trusted our project to invest their money. For the team, they are not simply owners of an NFT that they can trade or hold, we want to offer not only real utility, but also direct benefits from holding the NFT.
+                <br><br>
+                Throughout all this time, we have seen how countless projects were born and died; some for not having a clear direction, others for not providing anything to their investors after the sold out or for not delivering the roadmap.
+                <br><br>
+                For more details : <a href="https://medium.com/@trippinpanda76/pandapaper-b6e0c30e23fe">Trippin Medium</a></p>
+                
             <div class="roadmap-container">
-                <div class="timeline" data-aos-anchor-placement="bottom-bottom">
-                    {# here #}
                     {% for roadmap in road_maps %}
                         {% if roadmap.id % 2 == 0 %}
-                            <div class="container left">
-                                <div class="content" data-aos="fade-up-right" data-aos-duration="1500">
-                                    <div class="content-header">
-                                        <span class="content-header-title">{{ roadmap.title }}</span>
-                                        <span class="content-header-time">{{ roadmap.date }}</span>
-                                    </div>
-                                    <p>
-                                        {% if roadmap.date == "Stage 1" %}
-                                        <a style="color: white; text-decoration: none;" href="https://twitter.com/CyberCloneNFT">https://twitter.com/CyberCloneNFT</a><br>
-                                        <a style="color: white; text-decoration: none;" href="https://discord.gg/ZGByP3TA">https://discord.gg/ZGByP3TA</a>
-                                        {% else %}
-                                            {{ roadmap.description | nl2br}}
-                                        {% endif %}
-                                    </p>
-                                </div>
+                            <div class="container-left">
+                                <p>
+                                    {{ roadmap.description | nl2br}}
+                                </p>
                             </div>
                         {% else %}
-                            <div class="container right">
-                                <div class="content" data-aos="fade-up-left" data-aos-duration="1500">
-                                    <div class="content-header">
-                                        <span class="content-header-title">{{ roadmap.title }}</span>
-                                        <span class="content-header-time">{{ roadmap.date }}</span>
-                                    </div>
-                                    <p>
-                                        {% if roadmap.date == "Stage 1" %}
-                                        <a style="color: white; text-decoration: none;" href="https://twitter.com/CyberCloneNFT">-  https://twitter.com/CyberCloneNFT</a><br>
-                                        <a style="color: white; text-decoration: none;" href="https://discord.gg/ZGByP3TA">-  https://discord.gg/ZGByP3TA</a>
-                                        {% else %}
-                                            {{ roadmap.description | nl2br}}
-                                        {% endif %}
-                                    </p>
-                                </div>
+                            <div class="container-right">
+                                <p>
+                                    {{ roadmap.description | nl2br}}
+                                </p>
                             </div>
                         {% endif %}
                     {% endfor %}
@@ -139,105 +180,92 @@
     </div>
 </section>
 
-<!-- About the club Section -->
-<section id="faq">
-    <div class="faq-section max-width-content">
-        <h1 class="section-title" data-aos="fade-up" data-aos-duration="1500">FAQ</h1>
-
-        {% for faq in faqs %}
-        <div class="topics">
-            <div class="topic" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
-                <details>
-                    <summary class="question">{{ faq.question }}</summary>
-                    <div class="answer">
-                        {{ faq.response }}
-                    </div>
-                </details>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</section>
-
 <!-- Team Section -->
 <section id="team">
     <div class="team-section max-width-content">
-        <h1 class="section-title" data-aos="fade-down"  data-aos-duration="1500">Team</h1>
-
-        <div class="section-container team-section-container">
-
+        <h1 class="section-title">Team</h1>
+        <div class="section-container">
             {% for team in teams %}
-                <div class="team-card" data-aos="flip-left" data-aos-duration="1500">
-                    <div class="team-card-img">
-                        <img src="{{ asset('/images/teams/' ~ team.picture) }}" alt="Team member {{ team.name }}"/>
-                    </div>
-                    <div class="team-card-name">{{ team.name }}</div>
-                    <div class="team-card-role">{{ team.job }}</div>
+                <div class="team-section-container">
+                    <img src="{{ asset('/images/teams/' ~ team.picture) }}" alt="Team member {{ team.name }}"/>
+                    <h2 class="team-card-name">{{ team.name }}</h2>
+                    <p class="team-card-role">{{ team.job }}</p>
                 </div>
             {% endfor %}
         </div>
     </div>
 </section>
 
+<!-- About the club Section -->
+<section id="faq">
+        <h1 class="section-title">FAQ</h1>
+        {% for faq in faqs %}
+            <div class="answer">
+                <strong style="text-decoration: underline;">{{ faq.question }}</strong><br> {{ faq.response }}
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+
 <!-- Footer -->
 <footer>
     <div class="footer">
         <div class="footer-container">
             <div class="footer-logo-container">
-                <div class="footer-cyber-container">
-                    <img class="footer-cyber-logo" src="{{ asset('build/images/items/logoCyberclone.png') }}" alt="cyber White Logo" />
-                    <div class="footer-cyber-text">
+                <div class="footer-panda-container">
+                    <img class="footer-panda-logo" src="{{ asset('build/images/items/panda-logo.png') }}" alt="panda Logo" />
+                    <div class="footer-panda-text">
                         Made by 
                         <br>
-                        CyberClone with 💙
+                        Trippin Panda with 💙
                     </div>
                     <div class="footer-vl"></div>
                 </div>
-                <img class="footer-cyber-logo-img" src="{{ asset('build/images/items/banniereCyberClone.png') }}" alt="Footer banniere" />
+                <img class="footer-panda-logo-img" src="{{ asset('build/images/items/banner-trip.jpg') }}" alt="Footer banniere" />
             </div>
             <div class="footer-menu-container">
                 <ul id="footer-menu">
                     <li>
-                        <a href="#banner">
-                            Home
-                        </a>
+                    <a href="#about">
+                        About
+                    </a>
                     </li>
-
                     <li>
-                        <a href="#about">
-                            About The Club
+                        <a href="#principles">
+                            Principles
                         </a>
                     </li>
-
                     <li>
                         <a href="#roadmap">
-                            Roadmap
+                            RoadMap
                         </a>
                     </li>
-
                     <li>
                         <a href="#team">
                             Team
                         </a>
                     </li>
-
-                    {# <li>
-                        <a href="terms.html">
-                            Terms & Conditions
+                    <li>
+                        <a href="#faq">
+                            Faq
                         </a>
-                    </li> #}
+                    </li>
                     <li>
                         <div class="socials">
                             <a href="https://discord.gg/rKnGgUDgYD">
                                 <img src = "{{ asset('build/images/socials/discord.svg') }}" alt="Discord" width="22" height="22" />
                             </a>
 
-                            <a href="https://twitter.com/cyberclonenft">
+                            <a href="https://twitter.com/pandaclonenft">
                                 <img src = "{{ asset('build/images/socials/twitter.svg') }}" alt="Twitter" width="22" height="22" />
                             </a>
                         
-                            <a href="https://medium.com/cyber-clone">
+                            <a href="https://medium.com/panda-clone">
                                 <img src = "{{ asset('build/images/socials/medium.svg') }}" alt="Medium" width="22" height="22" />
+                            </a>
+                            <a href="https://medium.com/panda-clone">
+                                <img src = "{{ asset('build/images/socials/telegram.svg') }}" alt="Telegram" width="22" height="22" />
                             </a>
                         </div>
                     </li>
@@ -245,11 +273,11 @@
             </div>
         </div>
         <div class="copyright">
-            ©2022 CyberClone. All rights reserved.
+            ©2022 Trippin Panda. All rights reserved.
         </div>
     </div>
 </footer>
-<script>
+{# <script>
     let menu = document.getElementById('menu-button');
     let menuclose = document.getElementById('button-close');
     let lists = document.querySelectorAll('.list-menu');
@@ -269,6 +297,6 @@
         menuclose.style.display = 'none';
         menu.style.display = 'block';
     });
-</script>
+</script> #}
 {% endblock %}
 

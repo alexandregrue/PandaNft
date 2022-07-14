@@ -124,8 +124,8 @@ class AdminDashboardController extends AbstractController
             $picture = $form->get('picture')->getData();
             if($picture !== null) {
                 $pictureRemove = $team->getPicture();
-                unlink($this->getParameter('pictures_directory').'/'.$pictureRemove);
-                $file = md5(uniqid()).'.'.$picture->guessExtension();
+/*                 unlink($this->getParameter('pictures_directory').'/'.$pictureRemove);
+ */                $file = md5(uniqid()).'.'.$picture->guessExtension();
                 $picture->move(
                 $this->getParameter('pictures_directory'),
                 $file
