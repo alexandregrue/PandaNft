@@ -212,10 +212,19 @@ body, section {
         }
 
         .section-container {
-            p {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+                p {
                 font-size: 1.5rem;
                 color: #fff;
-            }
+                }
+
+                img {
+                    width: 100%;
+                }
 
             .roadmap-container {
                 display: flex;
