@@ -109,13 +109,13 @@ body, section {
        margin-top: 3rem;
 
        h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: white;
        }
     }
 
     p {
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: #fff;
 
     }
@@ -146,7 +146,7 @@ body, section {
         }
     
         p {
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: #fff;
     
         }
@@ -355,7 +355,7 @@ body, section {
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    margin-bottom: 3rem;
+                    margin-bottom: 0.5rem;
     
                     img {
                         max-width: 250px;
@@ -445,6 +445,18 @@ body, section {
 }
 
 @media screen and (max-width: 768px) {
+    p {
+        font-size: 1rem !important;
+    }
+
+    h1 {
+        font-size: 1.75rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
     .carousel {
         flex-direction: column;
 
