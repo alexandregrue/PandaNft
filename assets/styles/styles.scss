@@ -2,6 +2,7 @@
 @import './font.scss';
 @import './footer.scss';
 
+
 * {
     font-family: 'The Meshroom';
 }
@@ -357,6 +358,7 @@ body, section {
                     margin-bottom: 3rem;
     
                     img {
+                        max-width: 250px;
                         width: 100%;
                         height: auto;
                         border-radius: 5px;
@@ -427,6 +429,30 @@ body, section {
     }
  }
 
+.carousel {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+
+    img {
+        width: 200px;
+        height: auto;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        flex-direction: column;
+
+        img {
+            margin-bottom: 2rem;
+        }
+    }
+}   
 
 
 
