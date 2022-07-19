@@ -102,7 +102,7 @@
             </a>
         </li>
         <li class="list-menu">
-            <a href="{{ path('auction') }}"></a>">
+            <a href="{{ path('auction') }}"></a>
                 Auction
             </a>
         </li>
@@ -120,11 +120,6 @@
 
 <!-- Diapo -->
 
-<div class="carousel">
-    <img src="{{ asset('build/images/items/69.png') }}" alt="First slide">
-    <img src="{{ asset('build/images/items/70.png') }}" alt="Second slide">
-    <img src="{{ asset('build/images/items/807.png') }}" alt="Third slide">
-</div>
 
 
 
@@ -132,103 +127,10 @@
 
 
 <div class="enter-trip">
-    <p class="enter">Enter the trip</p>
+    <p class="enter">Comming</p>
     <img src="{{ asset('build/images/items/panda-logo.png') }}" alt="pandalogo">
-    <p class="trippin">Trippin Panda</p>
+    <p class="trippin">Soon</p>
 </div>
-
-<!-- About the club Section -->
-<section id="about">
-    <div class="about-section max-width-content">
-        <h1 class="section-title">Who we are</h1>
-        <p>
-            {{ abouts[0].description }}
-        </p>
-    </div>
-</section>
-
-<div class="panda-banner">
-    <img src="{{ asset('build/images/items/pandas-banner.png') }}" alt="panda banner">
-</div>
-
-<div class="principles" id="principles">
-    <h1 class="section-title">Principles</h1>
-    <div class="banner-container-description">
-        {% for description in descriptions %}
-            <div class="description-card">
-                <div class="content">
-                    <h2>{{ description.title }}</h2>
-                    <p>
-                        {{ description.description }}
-                    </p>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-</div>
-
-<!-- Roadmap Section -->
-<section id="roadmap">
-    <div class="roadmap-section max-width-content">
-        <h1 class="section-title">Pandamap</h1>
-        <div class="section-container">
-            <p>
-                Our goal is simple: to offer the holder reasons to hold.
-                Despite liking the term “holder” very much, we see them more as investors who have trusted our project to invest their money. For the team, they are not simply owners of an NFT that they can trade or hold, we want to offer not only real utility, but also direct benefits from holding the NFT.
-                <br><br>
-                Throughout all this time, we have seen how countless projects were born and died; some for not having a clear direction, others for not providing anything to their investors after the sold out or for not delivering the roadmap.
-                <br><br>
-                For more details : <a href="https://medium.com/@trippinpanda76/pandapaper-b6e0c30e23fe">Trippin Medium</a></p>
-                
-                <img src="{{ asset('build/images/items/roadmap.png') }}" alt="">
-            {# <div class="roadmap-container">
-                    {% for roadmap in road_maps %}
-                        {% if roadmap.id % 2 == 0 %}
-                            <div class="container-left">
-                                <p>
-                                    {{ roadmap.description | nl2br}}
-                                </p>
-                            </div>
-                        {% else %}
-                            <div class="container-right">
-                                <p>
-                                    {{ roadmap.description | nl2br}}
-                                </p>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div> #}
-        </div>
-    </div>
-</section>
-
-<!-- Team Section -->
-<section id="team">
-    <div class="team-section max-width-content">
-        <h1 class="section-title">Team</h1>
-        <div class="section-container">
-            {% for team in teams %}
-                <div class="team-section-container">
-                    <img src="{{ asset('/images/teams/' ~ team.picture) }}" alt="Team member {{ team.name }}"/>
-                    <h2 class="team-card-name">{{ team.name }}</h2>
-                    <p class="team-card-role">{{ team.job }}</p>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-<!-- About the club Section -->
-<section id="faq">
-        <h1 class="section-title">FAQ</h1>
-        {% for faq in faqs %}
-            <div class="answer">
-                <strong style="text-decoration: underline;">{{ faq.question }}</strong><br> {{ faq.response }}
-            </div>
-        {% endfor %}
-    </div>
-</section>
 
 
 <!-- Footer -->

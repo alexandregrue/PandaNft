@@ -30,4 +30,10 @@ class HomepageController extends AbstractController
             'teams' => $teamRepository->findAll(),
         ]);
     }
+
+    #[Route('/auction', name: 'auction')]
+    public function auction(): Response
+    {
+        return $this->render('homepage/auction.html.twig', []);
+    }
 }
