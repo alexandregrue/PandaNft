@@ -119,17 +119,28 @@
 </div> #}
 
 <!-- Diapo -->
-
-<div class="carousel">
-    <img src="{{ asset('build/images/items/69.png') }}" alt="First slide">
-    <img src="{{ asset('build/images/items/70.png') }}" alt="Second slide">
-    <img src="{{ asset('build/images/items/807.png') }}" alt="Third slide">
+<div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="{{ asset('build/images/items/69.png') }}" alt="Third slide">
+      <img src="{{ asset('build/images/items/70.png') }}" alt="Third slide">
+      <img src="{{ asset('build/images/items/483.png') }}" alt="Third slide">
+    </div>
+    <div class="mySlides fade">
+      <img src="{{ asset('build/images/items/71.png') }}" alt="Second slide">
+      <img src="{{ asset('build/images/items/486.png') }}" alt="Second slide">
+      <img src="{{ asset('build/images/items/807.png') }}" alt="Second slide">
+    </div>
+    <div class="mySlides fade">
+      <img src="{{ asset('build/images/items/808.png') }}" alt="First slide">
+      <img src="{{ asset('build/images/items/809.png') }}" alt="First slide">
+      <img src="{{ asset('build/images/items/812.png') }}" alt="First slide">
+    </div>
+    <div class="mySlides fade">
+        <img src="{{ asset('build/images/items/483.png') }}" alt="First slide">
+        <img src="{{ asset('build/images/items/811.png') }}" alt="First slide">
+        <img src="{{ asset('build/images/items/484.png') }}" alt="First slide">
+      </div>
 </div>
-
-
-
-
-
 
 <div class="enter-trip">
     <p class="enter">Enter the trip</p>
@@ -180,7 +191,14 @@
                 <br><br>
                 For more details : <a href="https://medium.com/@trippinpanda76/pandapaper-b6e0c30e23fe">Trippin Medium</a></p>
                 
-                <img src="{{ asset('build/images/items/roadmap.png') }}" alt="">
+                <div class="roadmap-img">
+                    <img src="{{ asset('build/images/items/DAO.jpg') }}" alt="">
+                    <img src="{{ asset('build/images/items/charity.jpg') }}" alt="">
+                    <img src="{{ asset('build/images/items/top_5_holder.jpg') }}" alt="">
+                    <img src="{{ asset('build/images/items/investment_fund.jpg') }}" alt="">
+                    <img src="{{ asset('build/images/items/Airdrops.jpg') }}" alt="">
+                    <img src="{{ asset('build/images/items/NFT_Messaging.jpg') }}" alt="">
+                </div>
             {# <div class="roadmap-container">
                     {% for roadmap in road_maps %}
                         {% if roadmap.id % 2 == 0 %}
@@ -221,11 +239,20 @@
 
 <!-- About the club Section -->
 <section id="faq">
+    <div class="faq-section max-width-content">
         <h1 class="section-title">FAQ</h1>
+
         {% for faq in faqs %}
-            <div class="answer">
-                <strong style="text-decoration: underline;">{{ faq.question }}</strong><br> {{ faq.response }}
+        <div class="topics">
+            <div class="topic" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+                <details>
+                    <summary class="question">{{ faq.question }}</summary>
+                    <div class="answer">
+                        {{ faq.response }}
+                    </div>
+                </details>
             </div>
+        </div>
         {% endfor %}
     </div>
 </section>
@@ -305,6 +332,24 @@
         </div>
     </div>
 </footer>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+   
+      slides[slideIndex-1].style.display = "flex";  
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
 {# <script>
     let menu = document.getElementById('menu-button');
     let menuclose = document.getElementById('button-close');
