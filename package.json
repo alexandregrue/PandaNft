@@ -22,6 +22,8 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "@splidejs/splide": "^4.0.7",
+        "@splidejs/splide-extension-auto-scroll": "^0.4.2",
         "aos": "^2.3.4"
     }
 }

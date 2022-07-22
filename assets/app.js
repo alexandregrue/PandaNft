@@ -11,12 +11,37 @@ import './styles/footer.scss';
 import './styles/header.scss';
 import './styles/styles.scss';
 import './styles/logginForm.scss';
+import '@splidejs/splide/css';
+
 
 
 // start the Stimulus application
 import './bootstrap';
 
 // app.js
+
+import { Splide } from '@splidejs/splide';
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+
+new Splide( '.splide' ).mount( { AutoScroll } );
+
+const splide = new Splide( '.splide', {
+  type   : 'loop',
+  drag   : 'free',
+  focus  : 'center',
+  perPage: 6,
+  rewind: true,
+  width: '100%',
+  fixedWidth: 250,
+  pauseOnHover: false,
+  pauseOnFocus: false,
+  autoScroll: {
+    speed: 2,
+  },
+} );
+
+splide.mount();
+
 
 const $ = require('jquery');
 // this "modifies" the jquery module: adding behavior to it
@@ -37,6 +62,7 @@ $(document).ready(function() {
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { auto } from '@popperjs/core';
 // ..
 AOS.init({
     // Global settings:

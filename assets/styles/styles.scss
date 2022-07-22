@@ -3,6 +3,7 @@
 @import './footer.scss';
 
 
+
 * {
     font-family: 'The Meshroom';
 }
@@ -14,6 +15,7 @@ html, body {
 html {
     background-image: url('../images/items/BgPurple.png');
     background-size: cover;
+    background-position: center;
     min-height: 100%;
 
 }
@@ -200,95 +202,251 @@ body, section {
 }
 
 /** Section Roadmap */
-#roadmap {
+.roadmap-section {
     width: 80%;
-    margin: 5rem auto 0 auto;
-    display: flex;
-    flex-direction: column;
-    .roadmap-section {
-        h1 {
-            font-size: 3rem;
-            color: white;
-            text-align: center;
-        }
+    margin: auto;
 
-        .section-container {
+    h1 {
+        font-size: 3rem;
+        color: white;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .section-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .roadmap-container {
+        width: 50%;
+    }
+
+
+    * {
+        box-sizing: border-box;
+      }
+      
+      
+      /* The actual timeline (the vertical ruler) */
+      .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      /* The actual timeline (the vertical ruler) */
+      .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background: linear-gradient(180deg, rgb(29, 8, 48) 0%, rgb(25, 63, 87) 31%, rgb(48, 104, 168) 40%, rgb(121, 171, 199) 96%);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin-left: -3px;
+      }
+      
+      /* Container around content */
+      .container {
+        padding: 10px 35px;
+        position: relative;
+        background-color: inherit;
+        width: 100%;
+        margin: 50px 0;
+      }
+      
+      /* The circles on the timeline */
+      .container::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: -11px;
+        background-color: black;
+        border: 4px solid #fff;
+        top: 50px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      
+      /* Place the container to the left */
+      .left {
+        left: 0;
+        .content {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-                p {
-                font-size: 1.5rem;
-                color: #fff;
-                }
-
-                img {
-                    width: 100%;
-                }
-
-                .roadmap-img {
-                    display: flex;
-                    flex-direction: column;
-
-                    img {
-                        width: 300px;
-                        height: auto;
-                        border-radius: 5px;
-                        margin: 1rem 0;
-                    }
-                }
-            /* .roadmap-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                .container-left,
-                .container-right {
-                    background-image: url('../images/items/BgGreen.png');
-                    background-size: cover;
-                    width: 300px;
-                    height: 125px;
-                    font-size: 2rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 5px;
-                    margin-bottom: 2rem;
-                    p {
-                        text-align: center;
-                    }
-                }
-                .container-left {
-                    margin-left: 15rem;
-                }
-                .container-right {
-                    margin-right: 15rem
-                }
-            } */
+            align-items: flex-end;
         }
-    }
-}
+      }
+      
+      /* Place the container to the right */
+      .right {
+        left: 100%;
+      }
+      
+      /* Add arrows to the left container (pointing right) */
+      /*.left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+      }*/
+      
+      /* Add arrows to the right container (pointing left) */
+      /* .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      } */
+      
+      /* Fix the circle for containers on the right side */
+      .right::after {
+        left: -16px;
+      }
+      
+      /* The actual content */
+      .content {
+        padding: 10px 15px;
+        position: relative;
+        border-radius: 6px;
 
-@media screen and (max-width: 768px) {
-    #roadmap {
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 10px 0;
 
-        .roadmap-section {
-           
-            .section-container {
-           
-                .roadmap-container {
+            .content-header-title {
+                width: 85%;
+                color: #fff;
+                font-weight: bold;
+                padding: 3px 0;
+                font-size: 20px;
+            }
 
-                    .container-left {
-                        margin-left: 0;
-                    }
-                    .container-right {
-                        margin-right: 0
-                    }
-                }
+            .content-header-time {
+                color: black;
+                font-weight: bold;
+                padding: 6px;
+                background: #fff;
+                border-radius: 6px;
+                font-size: 12px;
+            }
+        }
+
+        img {
+            width: 300px;
+            height: auto;
+            border-radius: 5px;
+        }
+      }
+      
+      /* Media queries - Responsive timeline on screens less than 600px wide */
+      @media screen and (max-width: 900px) {
+      /* Place the timelime to the left */
+        .timeline::after {
+          left: 31px;
+        }
+
+        .roadmap-container {
+            width: 100%;
+        }
+      
+      /* Full-width containers */
+        .container {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+      
+      /* Make sure that all arrows are pointing leftwards */
+        /*.container::before {
+          left: 60px;
+          border: medium solid white;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent white transparent transparent;
+        }*/
+      
+      /* Make sure all circles are at the same spot */
+        .left::after, .right::after {
+          left: 15px;
+        }
+      
+      /* Make all right containers behave like the left ones */
+        .right {
+          left: 0%;
+        }
+
+        .left {
+            .content {
+                align-items: flex-start;
             }
         }
     }
+
+    #ape-scroll-container {
+        width: 50%;
+    }
+    
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .banner-section {
+        flex-direction: column;
+        
+    }
+
+    .banner-container {
+        /* width: 100%; */
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .text-animation {
+        margin: auto;
+        padding: 20px 0;
+    }
+
+    .img-banner {
+        width: 100%;
+    }
+
+    .text-animation, .text-animation span {
+        font-size: 30px !important;
+    }
+}
+
+.roadmap-section {
+    z-index: 1;
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    left: 77.77%;
+    top: -250px;
+    margin: 0;
 }
     
 
@@ -296,7 +454,7 @@ body, section {
  * Section Team        * 
  ***********************/
 #team {
-    width: 80%;
+    width: 70%;
     margin: 5rem auto 0 auto;
     display: flex;
     flex-direction: column;
@@ -361,7 +519,7 @@ body, section {
                 padding: 50px 0;
                 .team-section-container {
                     
-                    width: 75%;
+                    width: 70%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -369,7 +527,7 @@ body, section {
                     margin-bottom: 0.5rem;
     
                     img {
-                        max-width: 250px;
+                        max-width: 200px;
                         width: 100%;
                         height: auto;
                         border-radius: 5px;
@@ -509,46 +667,18 @@ body, section {
     }
  }
 
- .slideshow-container {
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-     .mySlides {
-         margin: auto;
-         display: flex;
-         flex-direction: row;
-         justify-content: center;
-         flex-wrap: wrap;
-         align-items: center;
-     
-         img {
-             width: 250px;
-             height: auto;
-             border-radius: 5px;
-             margin: 2rem 2rem;
-         }
-     }
- }
-
-@media screen and (max-width: 768px) {
-    p {
-        font-size: 1rem !important;
+ 
+.splide {
+    .splide__track {
+        ul {
+            position: relative;
+            left: 0;
+            li {
+                img {
+                    width: 250px;
+                    height: auto;
+                }
+            }
+        }
     }
-
-    h1 {
-        font-size: 1.75rem !important;
-    }
-
-    h2 {
-        font-size: 1.5rem !important;
-    }
-
-    
-}   
-
-
-
-
-
-
+}
